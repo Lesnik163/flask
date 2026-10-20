@@ -1,0 +1,9 @@
+# виртуальное окружение в корне проекта
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# кэш Python
+__pycache__/
+*.py[cod]
