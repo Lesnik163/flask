@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/notes.css') }}">
+{% endblock %}
+{% block content %}
+<main class="diary">
+  <section>
+    <h1>Дневник программиста</h1>
+    <form method="post">
+      <label for="title">Заголовок</label>
+      <input type="text" id="title" name="title">
+      <label for="content">Текст записи</label>
+      <textarea id="content" name="content"></textarea>
+      <button type="submit">Добавить</button>
+    </form>
+  </section>
+  <section class="diary-list">
+    <h2>Записи</h2>
+    {% if notes %}
+    <ul>
+      {% for heading, text in notes.items() %}
+      <li>
+        <strong>{{ heading }}</strong>
+        <p>{{ text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="diary-empty">Пока нет ни одной записи.</p>
+    {% endif %}
+  </section>
+</main>
+{% endblock %}
