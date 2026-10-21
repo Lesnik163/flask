@@ -1,0 +1,75 @@
+.diary form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 640px;
+}
+
+.diary label {
+  margin-top: 8px;
+  color: #244255;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.diary input,
+.diary textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #c5d4e4;
+  border-radius: 10px;
+  background-color: #f7fbfe;
+  color: #1c2b3a;
+  font: inherit;
+}
+
+.diary textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.diary button {
+  margin-top: 8px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #1f7a8c;
+  color: #ffffff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.diary button:hover {
+  background-color: #186272;
+}
+
+.diary-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.diary-list li {
+  margin: 0;
+  padding: 16px 18px;
+  background-color: #f3f8fc;
+  border-radius: 12px;
+  font-size: 17px;
+}
+
+.diary-list strong {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.diary-empty {
+  color: #526273;
+  font-size: 17px;
+}

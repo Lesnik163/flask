@@ -1,0 +1,106 @@
+{% extends "index.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock %}
+{% block content %}
+<main>
+  <section id="about" class="about">
+    <figure>
+      <img src="{{ url_for('static', filename='img/flask.png') }}" width="309" height="100" alt="Логотип Flask">
+      <figcaption>Приложение собрано на фреймворке Flask</figcaption>
+    </figure>
+    <div>
+      <h1>Мои достижения и навыки</h1>
+      <p>Это учебный блог. Здесь я рассказываю, чему уже научился в веб-разработке: как устроена страница, как
+        подключаются стили и как Python открывает HTML-шаблон.</p>
+      <blockquote>Сейчас у меня получается запустить сайт локально и оформить его без правок в самом Python-коде
+        страницы.</blockquote>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Навыки</h2>
+    <ul>
+      <li><strong>Python</strong> — описываю маршрут и передаю управление шаблону.</li>
+      <li><strong>HTML</strong> — собираю страницу из заголовков, списков, таблицы и других тегов.</li>
+      <li><strong>CSS</strong> — меняю фон, шрифты, размеры текста, картинку и расположение блоков.</li>
+      <li><strong>Flask</strong> — связываю файл приложения со статикой и шаблоном <em>index.html</em>.</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Достижения</h2>
+    <div class="achievement-list">
+      <article>
+        <h3>Первый запуск приложения</h3>
+        <p>Главная страница открывается из файла <em>main.py</em>. Отдельный обработчик отдаёт готовый шаблон, а не
+          строку с разметкой прямо в коде.</p>
+      </article>
+      <article>
+        <h3>Собственная вёрстка блога</h3>
+        <p>Шаблон состоит из разных HTML-тегов, а внешний вид вынесен в отдельный CSS-файл и подключён к странице.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="progress">
+    <h2>Прогресс по дисциплине</h2>
+      <p>В таблице восемь колонок: первая — названия строк, дальше семь тем дисциплины. Четыре строки: шапка с
+      названиями, процент выполнения темы, процент выполнения домашнего задания и комментарий. Заполнены ячейки по
+      первым трём темам.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Семь тем дисциплины и названия строк</caption>
+        <colgroup>
+          <col class="label-col">
+          <col span="7">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Тема 1. Основы Flask</th>
+            <th>Тема 2. HTML &amp; CSS</th>
+            <th>Тема 3. Шаблоны и формы в Flask</th>
+            <th>Тема 4. Основы Flask-SQLAlchemy. Работа с базами данных в Flask</th>
+            <th>Тема 5. Авторизация в Flask</th>
+            <th>Тема 6. Работа с REST API</th>
+            <th>Тема 7. Итоговый проект</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="percent">
+            <th scope="row">Процент выполнения темы</th>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="percent">
+            <th scope="row">Процент выполнения домашнего задания</th>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="comment">
+            <th scope="row">Комментарии к теме</th>
+            <td>Основы Flask изучены, локальный сервер запускается.</td>
+            <td>Страница сверстана на HTML, стили CSS подключены.</td>
+            <td>Общий шаблон подключён, форма дневника пишет записи в словарь.</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+{% endblock %}

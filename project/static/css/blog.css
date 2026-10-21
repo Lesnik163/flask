@@ -1,0 +1,147 @@
+.about {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 309px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 8px;
+  color: #526273;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+blockquote {
+  margin: 16px 0 0;
+  padding-left: 16px;
+  border-left: 4px solid #1f7a8c;
+  color: #244255;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.achievement-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+article {
+  padding: 16px 18px;
+  background-color: #f3f8fc;
+  border-radius: 12px;
+}
+
+article p {
+  font-size: 17px;
+}
+
+.table-wrap {
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 1280px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+caption {
+  caption-side: bottom;
+  margin-top: 12px;
+  color: #3d5166;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid #c5d4e4;
+  padding: 10px 8px;
+  vertical-align: top;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.label-col {
+  width: 220px;
+}
+
+th {
+  background-color: #1f7a8c;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+thead th:first-child {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+th[scope="row"] {
+  background-color: #e7f3f6;
+  color: #1c2b3a;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.percent td {
+  height: 52px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comment td {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .about,
+  .achievement-list {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: min(309px, 100%);
+    height: auto;
+  }
+}
