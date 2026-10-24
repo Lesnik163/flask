@@ -18,10 +18,10 @@
     <h2>Записи</h2>
     {% if notes %}
     <ul>
-      {% for heading, text in notes.items() %}
+      {% for note in notes %}
       <li>
-        <strong>{{ heading }}</strong>
-        <p>{{ text }}</p>
+        <strong>{{ note.title }}</strong>
+        <p>{{ note.text }}</p>
       </li>
       {% endfor %}
     </ul>
