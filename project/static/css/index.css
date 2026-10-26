@@ -102,6 +102,28 @@ em {
   font-style: italic;
 }
 
+button,
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #1f7a8c;
+  color: #ffffff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+  background-color: #186272;
+}
+
 @media (max-width: 800px) {
   header,
   footer {
