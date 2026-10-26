@@ -1,6 +1,15 @@
 {% extends "index.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
 {% block content %}
-<h1>
-  Главная
-</h1>
+<main>
+  <section class="home">
+    <h1>Главная</h1>
+    <div class="home-actions">
+      <a class="button" href="/register">Регистрация</a>
+      <a class="button" href="/login">Логин</a>
+    </div>
+  </section>
+</main>
 {% endblock %}

@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+{% endblock %}
+{% block content %}
+<main>
+  <section>
+    <form class="register-form" method="post">
+      <label for="username">Логин</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Войти</button>
+    </form>
+  </section>
+</main>
+{% endblock %}
